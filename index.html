@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanmay Kalbande - Crafting Insights from Data</title>
+  <meta name="description" content="Data science enthusiast with a solid foundation in statistical analysis, machine learning, and data visualization. Ready to contribute to meaningful insights and data-driven decision-making.">
+  <meta name="keywords" content="data science, machine learning, statistics, data visualization, Python, SQL, AI, Big Data, NLP, ethical AI, deep learning, TinyML">
+  <meta name="author" content="Tanmay Kalbande">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Tanmay Kalbande - Data Science Portfolio">
+  <meta property="og:description" content="Data science enthusiast with a solid foundation in statistical analysis, machine learning, and data visualization. Ready to contribute to meaningful insights and data-driven decision-making.">
+  <meta property="og:image" content="bits-and-bytes/resources/portfolio.png">
+  <meta property="og:url" content="https://tanmay-kalbande.github.io/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="bits-and-bytes/resources/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #74512D, #577B8D);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      scroll-behavior: smooth;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    ::selection {
+      background-color: #ffd700;
+      color: #333;
+    }
+
+    ::-moz-selection {
+      background-color: #ffd700;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1300px;
+      margin: 20px auto;
+      padding: 40px 70px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .left {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .logo {
+      font-size: 60px;
+      font-weight: 900;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .tagline {
+      font-size: 30px;
+      font-weight: 700;
+      margin-top: 5px;
+      margin-bottom: 35px;
+      color: #555;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid orange;
+      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+
+    .description,
+    .benefit {
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 15px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .button a {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-right: 15px;
+      border: 3px solid #333;
+      font-weight: 700;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .button a:hover {
+      background-color: #ffd700;
+      color: #333;
+      border-color: #ffd700;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.75);
+    }
+
+    .button a.download {
+      border: 3px solid #ffd700;
+      background-color: #ffd700;
+      color: #333;
+    }
+
+    .button a.download:hover {
+      background-color: #333;
+      color: #fff;
+      border-color: #333;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(51, 51, 51, 0.75);
+    }
+
+    .right {
+      flex: 1;
+      text-align: right;
+      position: relative;
+    }
+
+    .stat {
+      margin-top: 25px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      background-color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .stat:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .fade-in-stat {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .value {
+      font-size: 48px;
+      font-weight: 700;
+      display: block;
+      color: #333;
+    }
+
+    .label {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      color: #666;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin: 10px 20px 0;
+      font-size: 14px;
+      color: #333;
+      font-weight: 600;
+      margin-top: auto;
+      background-color: #f8f8f8;
+      padding: 2px 0; /* Added padding for better spacing */
+    }
+
+    .hidden-mobile {
+      display: inline;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        margin: 10px 0;
+        border-radius: 0;
+        opacity: 1;
+        transform: none;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+      }
+
+      .tagline {
+        font-size: 25px;
+      }
+
+      .button {
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+
+      .button a {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .hidden-mobile {
+        display: none;
+      }
+
+      footer {
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+
+      footer span {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1 class="logo">Tanmay Kalbande</h1>
+      <p class="tagline">Data Science Enthusiast</p>
+      <p class="description">Passionate about leveraging data for meaningful insights and decision-making.</p>
+      <p class="benefit">Experienced in end-to-end development of predictive modeling solutions.</p>
+      <p class="benefit">Currently working at Capgemini, contributing to data-driven projects for the past 3 months.</p>
+      <div class="button">
+        <a href="bits-and-bytes/data_science_portfolio">Check My full portfolio!</a>
+        <a href="bits-and-bytes/resources/tanmay-resume.pdf" class="download">Download Resume</a>
+      </div>
+    </div>
+    <div class="right">
+      <div class="stat fade-in-stat">
+        <span class="value">1.5</span>
+        <span class="label">YEARS OF EXPERIENCE</span>
+      </div>
+      <div class="stat fade-in-stat">
+        <span class="value">7</span>
+        <span class="label">SUCCESSFUL PROJECTS</span>
+      </div>
+      <div class="stat fade-in-stat">
+        <span class="value">4</span>
+        <span class="label">CERTIFICATIONS</span>
+      </div>
+    </div>
+  </div>
+  <p style="display: none;">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=tanmay-sk-personal-pro.io&left_color=crimson&right_color=008080">
+  </p>
+  <footer>
+    <span>
+      <i class="fas fa-copyright"></i> 2024 Tanmay Kalbande. All rights reserved. Crafted with ❤️ and <i class="fas fa-coffee" style="color: #704214;"></i>
+    </span>
+    <span class="hidden-mobile">
+      <a href="mailto:kalbandetanmay@gmail.com" style="color: #333;"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/tanmay-kalbande" target="_blank" style="color: #333;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/tanmay-kalbande" target="_blank" style="color: #333;"><i class="fab fa-github"></i></a>
+      Phone: 737-838-1494
+      Last Updated: May 2024
+    </span>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector(".container");
+      const stats = document.querySelectorAll(".stat");
+      const fadeInElements = [container, ...stats];
+
+      const fadeInOnScroll = (element) => {
+        const rect = element.getBoundingClientRect();
+        const elemTop = rect.top;
+        const elemBottom = rect.bottom;
+        const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+
+        if (isVisible) {
+          element.classList.add('fade-in');
+        }
+      };
+
+      const handleScroll = () => {
+        fadeInElements.forEach(el => fadeInOnScroll(el));
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      handleScroll();
+    });
+  </script>
+</body>
+</html>
